@@ -13,7 +13,7 @@ jobs:
   - name: "copy file"
     script: |
       echo "Running linter tests..."
-      cp ./* /d/swg
+      cp -r * D:\swg\g
   - name: "run"
     script: |
       echo "Running linter tests..."
