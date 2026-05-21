@@ -5,7 +5,17 @@ jobs:
       echo "Starting installation..."
       npm i
       
-  - name: "Run Linter"
+  - name: "cd to repo"
+    script: |
+      echo "Running linter tests..."
+      cd Swiggy_FrontPage_Clone
+      
+  - name: "copy file"
+    script: |
+      echo "Running linter tests..."
+      cp ./* /d/swg
+  - name: "run"
     script: |
       echo "Running linter tests..."
       npm run dev
+  
