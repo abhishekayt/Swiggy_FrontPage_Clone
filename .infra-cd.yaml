@@ -13,5 +13,5 @@ jobs:
   - name: "run"
     script: |
       echo "Running linter tests..."
-      npm run dev
+      npm run start
   
