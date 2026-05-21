@@ -8,7 +8,7 @@ jobs:
   - name: "copy file"
     script: |
       echo "Running linter tests..."
-      cp -rf * D:\swg\g
+      cp -r * D:\swg\g
       
   - name: "run"
     script: |
