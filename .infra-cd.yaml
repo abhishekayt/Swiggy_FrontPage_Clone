@@ -3,15 +3,17 @@ jobs:
   - name: "Install Dependencies"
     script: |
       echo "Starting installation..."
-      npm i
+      npm install
       
-  - name: "copy file"
+  - name: "Copy files"
     script: |
-      echo "Running linter tests..."
-      cp -r * D:\swg\g
+      echo "Copying files to target directory..."
+      mkdir -p /home/abhishek/swg/g
+      cp -r * /home/abhishek/swg/g
       
-  - name: "run"
+  - name: "Start or Restart application"
     script: |
-      echo "Running linter tests..."
-      npm run start
-  
+      echo "Starting application with PM2..."
+      cd /home/abhishek/swg/g
+      # PM2 will start or restart the app in the background and let the agent finish
+      pm2 start npm --name "my-app" -- start || pm2 restart "my-app"
